@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="16px"
+
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:backgroundTint="@color/colorPrimary"
+            android:id="@+id/btnLoadDataLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="Internal Data"></Button>
+        <Button
+            android:backgroundTint="@color/colorPrimary"
+            android:id="@+id/btnListImported"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="List item imported"></Button>
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/titleListView"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/STT"
+            android:background="@color/colorAccent"
+            android:layout_width="50dp"
+            android:gravity="center"
+            android:layout_height="50dp"
+            android:text="@string/id" />
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:background="@color/colorAccent"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/itemName" />
+    </LinearLayout>
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/idLoadingPB"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+    <LinearLayout
+        android:id="@+id/viewBG"
+        android:visibility="visible"
+        android:background="@drawable/bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+</LinearLayout>
